@@ -4,4 +4,7 @@
 
 A very basic (non threading) [signals and slots](https://en.wikipedia.org/wiki/Signals_and_slots) implementation
 
-See discussion: https://groups.google.com/forum/#!msg/julia-users/T1LUOtpEXXo/mrQG6L2UAQAJ
+See:
+
+ - Initial discussion https://groups.google.com/forum/#!msg/julia-users/T1LUOtpEXXo/mrQG6L2UAQAJ
+ - PubSub.jl - a basic Julia implementation of publish-subscribe pattern https://github.com/femtotrader/PubSub.jl
