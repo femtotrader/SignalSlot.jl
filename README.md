@@ -1,8 +1,8 @@
-# SignalSlot
+# SignalSlot.jl
 
 [![Build Status](https://travis-ci.org/femtotrader/SignalSlot.jl.svg?branch=master)](https://travis-ci.org/femtotrader/SignalSlot.jl)
 
-A very basic (non threading) [signals and slots](https://en.wikipedia.org/wiki/Signals_and_slots) implementation
+A very basic (non threading) Julia implementation of [signals and slots](https://en.wikipedia.org/wiki/Signals_and_slots) pattern.
 
 ## Installation
 
