@@ -7,7 +7,7 @@ module SignalSlot
 
 using DataStructures
 
-typealias Slot Function
+const Slot = Function
 
 #=
 ToDo: will be possible when Julia will accept anonymous function with keyword arguments
@@ -37,7 +37,7 @@ function emit(signal::Signal, args...; kwargs...)
 end
 
 function connect(signal::Signal, slot::Slot)
-    key = symbol(slot)
+    key = Symbol(slot)
     if !haskey(signal.slots, key)
         signal.slots[key] = slot
     else
@@ -46,11 +46,11 @@ function connect(signal::Signal, slot::Slot)
 end
 
 function is_connected(signal::Signal, slot::Slot)
-    symbol(slot) in keys(signal.slots)
+    Symbol(slot) in keys(signal.slots)
 end
 
 function disconnect(signal::Signal, slot::Slot)
-    delete!(signal.slots, symbol(slot))
+    delete!(signal.slots, Symbol(slot))
 end
 
 
