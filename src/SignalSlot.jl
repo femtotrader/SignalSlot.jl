@@ -7,22 +7,11 @@ module SignalSlot
 
 using DataStructures
 
-const Slot = Function
-
-#=
-ToDo: will be possible when Julia will accept anonymous function with keyword arguments
-
-type Slot
+struct Slot
     f::Function
 end
-call(slot::Slot, args...; kwargs...) = slot.f(args...; kwargs...)
 
-myslot01 = Slot((args...; kwargs...) -> begin
-    println("myslot01 with $args and $kwargs")
-end)
-=#
-
-type Signal
+struct Signal
     slots::OrderedDict{Symbol,Slot}
 
     Signal() = new(OrderedDict())
@@ -31,7 +20,7 @@ end
 function emit(signal::Signal, args...; kwargs...)
     last_result = nothing
     for (symb, slot) in signal.slots
-        last_result = slot(args...; kwargs...)
+        last_result = slot.f(args...; kwargs...)
     end
     last_result
 end
