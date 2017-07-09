@@ -6,6 +6,7 @@ module SignalSlot
 
 
 using DataStructures
+export Signal, emit, is_connected, disconnect
 
 struct Slot
     f::Function

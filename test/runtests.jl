@@ -1,7 +1,8 @@
 using SignalSlot
 using Base.Test
 
-using SignalSlot: Signal, Slot, connect, emit, is_connected, disconnect
+using SignalSlot
+using SignalSlot: Slot, connect
 
 myslot01 = Slot((args...; kwargs...) -> begin
     "myslot01"
