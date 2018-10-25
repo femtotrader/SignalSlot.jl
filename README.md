@@ -14,3 +14,5 @@ julia> Pkg.clone("https://github.com/femtotrader/SignalSlot.jl")
 
  - Initial discussion https://groups.google.com/forum/#!msg/julia-users/T1LUOtpEXXo/mrQG6L2UAQAJ
  - [PubSub.jl](https://github.com/femtotrader/PubSub.jl) - a basic Julia implementation of publish-subscribe pattern
+ - [Reactive.jl](https://juliagizmos.github.io/Reactive.jl/)
+ - [Observables.jl](https://juliagizmos.github.io/Observables.jl/latest/)
